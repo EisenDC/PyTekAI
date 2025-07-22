@@ -1,103 +1,166 @@
+/* ---------- VARIABLES ---------- */
+:root {
+  --main-bg: #0f172a;
+  --primary: #10b981;
+  --text-light: #ffffff;
+  --text-dark: #1f2937;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
+  --font-main: 'Segoe UI', sans-serif;
+}
+
+/* ---------- GLOBAL ---------- */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: var(--font-main);
   line-height: 1.6;
   background-color: #f9fafb;
-  color: #1f2937;
+  color: var(--text-dark);
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-.site-header {
-  background-color: #111827;
-  color: white;
+/* ---------- HEADER ---------- */
+.hero {
+  background-color: var(--main-bg);
+  color: var(--text-light);
   text-align: center;
   padding: 3rem 1rem;
 }
 
 .logo {
-  max-width: 80px;
+  width: 80px;
   margin-bottom: 1rem;
 }
 
-.subheading {
-  margin-bottom: 1.5rem;
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
   font-size: 1.1rem;
+  margin-bottom: 1.5rem;
 }
 
 .cta-button {
-  background-color: #10b981;
+  display: inline-block;
+  background-color: var(--primary);
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  font-weight: bold;
   text-decoration: none;
-  display: inline-block;
-  transition: background-color 0.3s ease;
+  font-weight: bold;
+  transition: background 0.3s;
 }
 
 .cta-button:hover {
-  background-color: #059669;
+  background-color: #0ea172;
 }
 
-.hero {
-  background-color: #1f2937;
-  color: white;
+/* ---------- SECCIONES ---------- */
+section {
+  padding: 3rem 1.5rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+/* ---------- INTRO ---------- */
+.intro {
+  background-color: #e5e7eb;
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
 }
 
-.features {
-  background-color: white;
-  padding: 3rem 1rem;
+.intro p {
+  font-size: 1.1rem;
+  color: #374151;
 }
 
+/* ---------- GRID & CARDS ---------- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .card {
-  background-color: #f3f4f6;
+  background: var(--card-bg);
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  transition: transform 0.2s ease;
+  box-shadow: 0 4px 8px var(--card-shadow);
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
 
-.about, .contact {
-  padding: 3rem 1rem;
-  background-color: #f9fafb;
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--main-bg);
 }
 
-.site-footer {
-  text-align: center;
+/* ---------- TESTIMONIOS ---------- */
+.testimonios {
+  background-color: #f3f4f6;
+}
+
+.testimonio {
+  background: white;
   padding: 1.5rem;
-  background-color: #e5e7eb;
-  color: #6b7280;
-  font-size: 0.9rem;
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px var(--card-shadow);
 }
 
-a {
-  color: #10b981;
+.testimonio span {
+  display: block;
+  margin-top: 1rem;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* ---------- CONTACTO ---------- */
+.contacto a {
+  color: var(--primary);
+  font-weight: bold;
   text-decoration: none;
 }
 
-a:hover {
+.contacto a:hover {
   text-decoration: underline;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background-color: #e5e7eb;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testimonios .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
 }
