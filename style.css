@@ -1,32 +1,47 @@
-body {
-  font-family: 'Segoe UI', sans-serif;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #f4f6f8;
-  color: #333;
 }
 
-header {
-  text-align: center;
-  background-color: #111827;
-  color: #ffffff;
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
   padding: 2rem;
 }
 
+.site-header {
+  background-color: #111827;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
 .logo {
-  max-width: 100px;
+  max-width: 80px;
   margin-bottom: 1rem;
 }
 
+.subheading {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
 .cta-button {
-  display: inline-block;
-  margin-top: 1rem;
   background-color: #10b981;
   color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  text-decoration: none;
   font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
   transition: background-color 0.3s ease;
 }
 
@@ -41,35 +56,48 @@ header {
   padding: 3rem 1rem;
 }
 
-.beneficios, .sobre-nosotros, .contacto {
+.features {
+  background-color: white;
   padding: 3rem 1rem;
-  background-color: #ffffff;
 }
 
-h2 {
-  color: #111827;
-  margin-bottom: 1rem;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
+.card {
+  background-color: #f3f4f6;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
 }
 
-ul li::before {
-  content: "✓";
-  margin-right: 0.5rem;
-  color: #10b981;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.container {
-  max-width: 800px;
-  margin: 0 auto;
+.about, .contact {
+  padding: 3rem 1rem;
+  background-color: #f9fafb;
 }
 
-footer {
+.site-footer {
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: #e5e7eb;
-  color: #555;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+a {
+  color: #10b981;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
