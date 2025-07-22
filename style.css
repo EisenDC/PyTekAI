@@ -1,0 +1,75 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background-color: #111827;
+  color: #ffffff;
+  padding: 2rem;
+}
+
+.logo {
+  max-width: 100px;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #10b981;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #059669;
+}
+
+.hero {
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.beneficios, .sobre-nosotros, .contacto {
+  padding: 3rem 1rem;
+  background-color: #ffffff;
+}
+
+h2 {
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: "✓";
+  margin-right: 0.5rem;
+  color: #10b981;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #e5e7eb;
+  color: #555;
+}
