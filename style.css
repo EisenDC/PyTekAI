@@ -1,182 +1,128 @@
-/* ---------- VARIABLES ---------- */
-:root {
-  --main-bg: #0f172a;
-  --primary: #10b981;
-  --text-light: #ffffff;
-  --text-dark: #1f2937;
-  --card-bg: #ffffff;
-  --card-shadow: rgba(0, 0, 0, 0.08);
-  --font-main: 'Segoe UI', sans-serif;
-}
-
-/* ---------- GLOBAL ---------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* === Estilos Globales === */
 body {
-  font-family: var(--font-main);
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
   line-height: 1.6;
-  background-color: #f9fafb;
-  color: var(--text-dark);
+  background-color: #f8f9fa;
 }
 
-/* ---------- HEADER ---------- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* === Header === */
 .hero {
-  background-color: var(--main-bg);
-  color: var(--text-light);
+  background-color: #e3f2fd;
+  color: #212121;
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 60px 20px 40px;
+  border-bottom: 1px solid #ddd;
 }
 
 .logo {
-  width: 80px;
-  margin-bottom: 1rem;
+  width: 100px;
+  border-radius: 20px;
+  margin-bottom: 10px;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+h1 {
+  font-size: 2.5em;
+  margin: 10px 0;
 }
 
 .cta-button {
   display: inline-block;
-  background-color: var(--primary);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  margin-top: 20px;
+  background-color: #00c853;
+  color: #fff;
+  padding: 12px 24px;
   text-decoration: none;
+  border-radius: 30px;
   font-weight: bold;
-  transition: background 0.3s;
-  box-shadow: 0 4px 8px rgba(16, 185, 129, 0.3);
+  transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #0ea172;
+  background-color: #00b342;
 }
 
-/* ---------- SECTIONS ---------- */
+/* === Secciones === */
 section {
-  padding: 3rem 1.5rem;
-  max-width: 1100px;
-  margin: auto;
+  padding: 60px 0;
 }
 
 h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: var(--text-dark);
   text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #111;
 }
 
-/* ---------- INTRO ---------- */
-.intro {
-  background-color: #e5e7eb;
-  text-align: center;
-  padding: 2rem 1rem;
-}
-
-.intro p {
-  font-size: 1.1rem;
-  color: #374151;
-}
-
-/* ---------- GRID & CARDS ---------- */
 .grid {
   display: grid;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
 }
 
 .card {
-  background: var(--card-bg);
-  padding: 1.5rem;
+  background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 8px var(--card-shadow);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  padding: 20px;
   transition: transform 0.3s ease;
+  border-top: 4px solid #2196f3;
 }
 
 .card:hover {
   transform: translateY(-5px);
 }
 
-.card h3 {
-  margin-bottom: 0.5rem;
-  color: var(--main-bg);
-}
-
-/* ---------- TESTIMONIOS ---------- */
-.testimonios {
-  background-color: #f3f4f6;
-}
-
-.testimonios .subtext {
-  text-align: center;
-  font-size: 0.95rem;
-  color: #6b7280;
-  margin-bottom: 1rem;
-}
-
 .testimonio {
-  background: #ffffff;
-  padding: 1.5rem;
-  border-left: 5px solid var(--primary);
+  background-color: #ffffff;
+  border-left: 5px solid #00c853;
+  padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
-}
-
-.testimonio span {
-  display: block;
-  margin-top: 1rem;
-  color: #6b7280;
   font-style: italic;
-  font-size: 0.95rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-/* ---------- CONTACTO ---------- */
-.contacto {
-  text-align: center;
+.about, .contacto {
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
 }
 
-.contacto a {
-  color: var(--primary);
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.contacto a:hover {
-  text-decoration: underline;
-}
-
-/* ---------- FOOTER ---------- */
 footer {
-  background-color: #e5e7eb;
+  background-color: #222;
+  color: #ccc;
   text-align: center;
-  padding: 1.2rem;
-  font-size: 0.9rem;
-  color: #6b7280;
+  padding: 30px 0;
+  font-size: 0.9em;
 }
 
-/* ---------- RESPONSIVE ---------- */
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .testimonios .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero h1 {
-    font-size: 3rem;
-  }
+footer p {
+  margin: 0;
 }
 
+/* === Botón flotante WhatsApp === */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  font-size: 26px;
+  padding: 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-decoration: none;
+  z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #20bd5f;
+}
 
