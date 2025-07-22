@@ -141,7 +141,7 @@ footer p {
 .whatsapp-float {
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   background-color: #25d366;
   color: white;
   font-size: 26px;
@@ -149,7 +149,7 @@ footer p {
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   text-decoration: none;
-  z-index: 100;
+  z-index: 1000;
   transition: background-color 0.3s ease;
 }
 
