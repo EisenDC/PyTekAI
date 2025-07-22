@@ -7,6 +7,7 @@ body {
   color: #333;
   line-height: 1.6;
   background-color: #f8f9fa;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -75,18 +76,22 @@ h2 {
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
   padding: 20px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-top: 4px solid #10b981;
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
 }
 
 .card h3 {
   color: #0a4d4d;
   margin-bottom: 10px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .testimonio {
@@ -112,6 +117,7 @@ h2 {
   color: #0a4d4d;
   font-style: italic;
   font-weight: 600;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.06);
 }
 
 .about, .contacto {
@@ -151,4 +157,20 @@ footer p {
   background-color: #20bd5f;
 }
 
+/* === Animaciones === */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
 
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Iconos opcionales (requiere incluir librería externa si se usan) === */
+.card i {
+  color: #0a4d4d;
+  font-size: 1.2em;
+}
