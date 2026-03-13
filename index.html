@@ -4,124 +4,543 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PyTekAI | Transformación Digital con IA, Automatización y Tecnología</title>
-  <meta name="description" content="Transformación digital para pequeñas y medianas empresas con inteligencia artificial. Automatización y tecnología para crecer tu negocio." />
+  <meta name="description" content="Transformación digital para PYMES con inteligencia artificial. Automatización, chatbots, IoT y desarrollo a medida." />
   <meta name="keywords" content="IA, Inteligencia Artificial, Automatización, PYMES, Chatbots, PyTekAI, transformación digital" />
   <meta name="author" content="PyTekAI" />
-  <meta property="og:title" content="PyTekAI | Transformación Digital con IA, Automatización y Tecnología" />
+  <meta property="og:title" content="PyTekAI | Transformación Digital con IA" />
   <meta property="og:description" content="Automatización, chatbots e inteligencia artificial para hacer crecer tu empresa." />
   <meta property="og:image" content="logo.jpg" />
   <meta property="og:type" content="website" />
   <meta name="geo.region" content="CO-DC, US-FL">
   <meta name="geo.placename" content="Bogotá, Fort Lauderdale">
   <link rel="canonical" href="https://pytekai.netlify.app/" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
   <link rel="icon" href="favicon.png" type="image/png" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:#06090f; --bg2:#0b0f1c; --bg3:#101626; --bg4:#141b2e;
+      --cyan:#00e5c0; --blue:#1a6bff;
+      --text:#e8edf8; --muted:#6b7a96;
+      --border:rgba(0,229,192,.12); --glow:0 0 40px rgba(0,229,192,.2); --r:14px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family:'DM Sans',sans-serif; background:var(--bg); color:var(--text); line-height:1.7; }
+    ::-webkit-scrollbar{width:5px} ::-webkit-scrollbar-track{background:var(--bg)} ::-webkit-scrollbar-thumb{background:var(--cyan);border-radius:3px}
+    #gc{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.35}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:16px 5vw;background:rgba(6,9,15,.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:background .3s}
+    .nb{display:flex;align-items:center;gap:10px;font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none;letter-spacing:-.4px}
+    .nb img{width:32px;height:32px;border-radius:8px;object-fit:cover}
+    .nb span{color:var(--cyan)}
+    .nl{display:flex;gap:28px;list-style:none}
+    .nl a{color:var(--muted);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .2s}
+    .nl a:hover{color:var(--cyan)}
+    .nc{background:var(--cyan)!important;color:#06090f!important;padding:8px 18px;border-radius:8px;font-weight:700!important;font-size:.82rem!important;transition:box-shadow .25s,transform .2s!important}
+    .nc:hover{box-shadow:var(--glow);transform:translateY(-1px)}
+    @media(max-width:768px){.nl{display:none}}
+
+    /* HERO */
+    .hero{position:relative;z-index:1;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:130px 5vw 80px}
+    .hlw{position:relative;width:110px;height:110px;display:flex;align-items:center;justify-content:center;margin-bottom:28px;animation:fu .7s ease both}
+    .hli{width:88px;height:88px;border-radius:20px;object-fit:cover;border:2px solid rgba(0,229,192,.4);box-shadow:0 0 50px rgba(0,229,192,.25),0 10px 40px rgba(0,0,0,.6);position:relative;z-index:1}
+    .hlr{position:absolute;inset:-8px;border-radius:28px;border:1.5px dashed rgba(0,229,192,.25);animation:spinR 10s linear infinite}
+    @keyframes spinR{to{transform:rotate(360deg)}}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,229,192,.08);border:1px solid rgba(0,229,192,.25);color:var(--cyan);font-size:.72rem;font-weight:700;padding:6px 16px;border-radius:999px;margin-bottom:26px;letter-spacing:.1em;text-transform:uppercase;animation:fu .8s .05s ease both}
+    .badge::before{content:'';width:7px;height:7px;background:var(--cyan);border-radius:50%;animation:pulse 1.8s infinite}
+    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.5)}}
+    h1{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,7.5vw,6.5rem);font-weight:800;line-height:1.02;letter-spacing:-3px;margin-bottom:22px;animation:fu .9s .1s ease both}
+    h1 .ac{color:var(--cyan)}
+    .hero>p{max-width:600px;font-size:1.08rem;color:var(--muted);font-weight:300;margin:0 auto 38px;animation:fu 1s .2s ease both}
+    .ha{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;animation:fu 1s .3s ease both}
+    .bp{display:inline-flex;align-items:center;gap:9px;background:var(--cyan);color:#06090f;font-weight:700;font-size:.98rem;padding:14px 30px;border-radius:10px;text-decoration:none;transition:box-shadow .25s,transform .2s}
+    .bp:hover{box-shadow:var(--glow);transform:translateY(-2px)}
+    .bg{display:inline-flex;align-items:center;gap:9px;background:transparent;color:var(--text);font-weight:500;font-size:.98rem;padding:14px 30px;border-radius:10px;text-decoration:none;border:1px solid rgba(255,255,255,.14);transition:border-color .25s,color .2s}
+    .bg:hover{border-color:var(--cyan);color:var(--cyan)}
+    .hstats{display:flex;gap:48px;flex-wrap:wrap;justify-content:center;margin-top:64px;padding-top:44px;border-top:1px solid var(--border);animation:fu 1s .45s ease both}
+    .si{text-align:center}
+    .sn{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:var(--cyan);line-height:1}
+    .sl{font-size:.78rem;color:var(--muted);margin-top:4px}
+    @keyframes fu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+
+    /* SHARED */
+    section{position:relative;z-index:1}
+    .ct{max-width:1120px;margin:0 auto;padding:0 5vw}
+    .sp{padding:96px 0}
+    .dark{background:var(--bg2)}
+    .darker{background:var(--bg3)}
+    .stag{display:inline-block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-bottom:12px}
+    h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;line-height:1.1;letter-spacing:-1.2px;margin-bottom:16px;color:var(--text)}
+    .sub{color:var(--muted);max-width:520px;font-size:1rem;font-weight:300}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.v{opacity:1;transform:translateY(0)}
+
+    /* CARDS */
+    .grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;margin-top:48px}
+    .card{background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:var(--r);padding:34px 30px;transition:border-color .3s,transform .3s,box-shadow .3s;position:relative;overflow:hidden}
+    .card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue));opacity:0;transition:opacity .3s}
+    .card:hover{border-color:rgba(0,229,192,.4);transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+    .card:hover::before{opacity:1}
+    .ci{width:46px;height:46px;display:flex;align-items:center;justify-content:center;background:rgba(0,229,192,.1);border-radius:11px;font-size:1.35rem;margin-bottom:18px}
+    .card h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:9px;letter-spacing:-.3px}
+    .card p{font-size:.92rem;color:var(--muted);line-height:1.65}
+
+    /* TABS */
+    .tabs{display:flex;gap:8px;flex-wrap:wrap;margin:36px 0 24px}
+    .tab{padding:9px 20px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:.85rem;font-weight:600;cursor:pointer;transition:all .25s;font-family:'DM Sans',sans-serif}
+    .tab.active,.tab:hover{background:rgba(0,229,192,.1);border-color:rgba(0,229,192,.35);color:var(--cyan)}
+    .tab-panel{display:none}
+    .tab-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    @media(max-width:640px){.tab-panel.active{grid-template-columns:1fr}}
+    .sc{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:34px 30px;display:flex;gap:20px;align-items:flex-start;transition:border-color .3s,transform .3s}
+    .sc:hover{border-color:rgba(0,229,192,.35);transform:translateY(-3px)}
+    .sc.featured{grid-column:span 2;background:linear-gradient(135deg,rgba(0,229,192,.05),rgba(26,107,255,.05));border-color:rgba(0,229,192,.25)}
+    @media(max-width:640px){.sc.featured{grid-column:span 1}}
+    .snum{font-family:'Syne',sans-serif;font-size:2.4rem;font-weight:800;color:rgba(0,229,192,.13);line-height:1;flex-shrink:0;width:50px}
+    .sb h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:8px;letter-spacing:-.3px}
+    .sb p{font-size:.9rem;color:var(--muted);line-height:1.65}
+    .sticker{display:inline-block;background:rgba(0,229,192,.12);color:var(--cyan);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:999px;margin-bottom:8px}
+
+    /* PRICING */
+    .price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;margin-top:48px}
+    .pc{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:36px 30px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
+    .pc:hover{border-color:rgba(0,229,192,.35);transform:translateY(-4px)}
+    .pc.hl{border-color:rgba(0,229,192,.4);background:linear-gradient(145deg,rgba(0,229,192,.06),rgba(26,107,255,.04))}
+    .pc-badge{position:absolute;top:18px;right:18px;background:var(--cyan);color:#06090f;font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+    .pc-name{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:var(--muted);margin-bottom:10px}
+    .pc-price{font-family:'Syne',sans-serif;font-size:2.8rem;font-weight:800;color:var(--cyan);line-height:1;margin-bottom:4px}
+    .pc-sub{font-size:.8rem;color:var(--muted);margin-bottom:22px}
+    .pc-list{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:26px}
+    .pc-list li{font-size:.88rem;color:var(--muted);display:flex;gap:9px;align-items:flex-start}
+    .pc-list li::before{content:'✓';color:var(--cyan);font-weight:700;flex-shrink:0}
+    .pc-btn{display:block;text-align:center;padding:12px;border-radius:9px;font-weight:700;font-size:.88rem;text-decoration:none;transition:all .25s}
+    .pc-btn.primary{background:var(--cyan);color:#06090f}
+    .pc-btn.primary:hover{box-shadow:var(--glow);transform:translateY(-1px)}
+    .pc-btn.ghost{border:1px solid var(--border);color:var(--text)}
+    .pc-btn.ghost:hover{border-color:var(--cyan);color:var(--cyan)}
+
+    /* CLIENTS */
+    .cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:22px;margin-top:48px}
+    .cc{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:border-color .3s,transform .3s;text-decoration:none;display:block}
+    .cc:hover{border-color:rgba(0,229,192,.4);transform:translateY(-4px)}
+    .cp{height:160px;background:var(--bg4);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .cp-icon{font-size:3rem}
+    .cp-bar{position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
+    .ci2{padding:22px 24px}
+    .ctype{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:6px}
+    .ci2 h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:6px;color:var(--text)}
+    .ci2 p{font-size:.85rem;color:var(--muted);line-height:1.55}
+    .cl{display:inline-flex;align-items:center;gap:5px;margin-top:10px;font-size:.8rem;color:var(--cyan);font-weight:600}
+
+    /* SECTORS */
+    .sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:40px}
+    .sec{background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:10px;padding:20px 18px;transition:border-color .25s,background .25s}
+    .sec:hover{border-color:rgba(0,229,192,.3);background:rgba(0,229,192,.04)}
+    .sec-i{font-size:1.5rem;margin-bottom:8px}
+    .sec h4{font-family:'Syne',sans-serif;font-size:.88rem;font-weight:700;margin-bottom:4px}
+    .sec p{font-size:.78rem;color:var(--muted);line-height:1.5}
+
+    /* PROCESS */
+    .ps{display:flex;flex-direction:column;gap:0;margin-top:52px;max-width:650px}
+    .psi{display:flex;gap:24px;align-items:flex-start;padding-bottom:38px;position:relative}
+    .psi::after{content:'';position:absolute;left:18px;top:40px;bottom:0;width:1.5px;background:linear-gradient(180deg,var(--cyan),transparent)}
+    .psi:last-child::after{display:none}
+    .psd{flex-shrink:0;width:38px;height:38px;border-radius:50%;background:rgba(0,229,192,.1);border:2px solid var(--cyan);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:.78rem;color:var(--cyan)}
+    .psb h3{font-family:'Syne',sans-serif;font-size:1.02rem;font-weight:700;margin-bottom:5px;letter-spacing:-.2px}
+    .psb p{font-size:.88rem;color:var(--muted)}
+
+    /* PARTNERSHIP */
+    .pg{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:48px}
+    @media(max-width:640px){.pg{grid-template-columns:1fr}}
+    .pct{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:32px 28px}
+    .pct.full{grid-column:span 2;display:flex;gap:36px;align-items:center}
+    @media(max-width:640px){.pct.full{grid-column:span 1;flex-direction:column;gap:20px}}
+    .pct h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:8px}
+    .pct p{font-size:.88rem;color:var(--muted)}
+    .dw{display:flex;gap:24px;flex-shrink:0}
+    .di{text-align:center}
+    .dr{width:78px;height:78px;border-radius:50%;background:conic-gradient(var(--cyan) var(--p),rgba(255,255,255,.07) 0);display:flex;align-items:center;justify-content:center;margin-bottom:7px;box-shadow:inset 0 0 0 13px var(--bg3)}
+    .dv{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:800;color:var(--text)}
+    .dl{font-size:.7rem;color:var(--muted);font-weight:600}
+
+    /* TESTIMONIALS */
+    .tg{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
+    @media(max-width:640px){.tg{grid-template-columns:1fr}}
+    .tc{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:32px;position:relative}
+    .tc::before{content:'"';position:absolute;top:12px;left:24px;font-size:3.5rem;font-family:'Syne',sans-serif;font-weight:800;color:var(--cyan);opacity:.22;line-height:1}
+    .tc-t{font-size:.98rem;color:var(--text);font-weight:300;margin-bottom:20px;padding-top:8px}
+    .tc-a{display:flex;align-items:center;gap:10px}
+    .tc-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--blue));display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:.82rem;color:#06090f}
+    .tc-stars{color:#f4c430;font-size:.78rem;letter-spacing:2px;margin-bottom:2px}
+    .tc-name{font-weight:600;font-size:.86rem}
+    .tc-role{font-size:.76rem;color:var(--muted)}
+
+    /* ABOUT */
+    .ag{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+    @media(max-width:768px){.ag{grid-template-columns:1fr}}
+    .av{height:320px;border-radius:20px;background:linear-gradient(135deg,rgba(0,229,192,.07),rgba(26,107,255,.07));border:1px solid var(--border);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .ao{position:absolute;border:1px dashed rgba(0,229,192,.18);border-radius:50%;animation:spinR 14s linear infinite}
+    .ao:nth-child(2){animation-duration:22s;animation-direction:reverse}
+    .ao::before{content:'';position:absolute;top:0;left:50%;transform:translate(-50%,-50%);width:7px;height:7px;background:var(--cyan);border-radius:50%}
+    .aw{width:96px;height:96px;border-radius:20px;border:1.5px solid var(--border);overflow:hidden;box-shadow:0 0 50px rgba(0,229,192,.18);z-index:1}
+    .aw img{width:100%;height:100%;object-fit:cover}
+    .at p{color:var(--muted);margin-bottom:14px;font-weight:300}
+    .guarantee{margin-top:26px;background:rgba(0,229,192,.06);border:1px solid rgba(0,229,192,.2);border-radius:10px;padding:16px 18px}
+    .guarantee h4{font-family:'Syne',sans-serif;font-size:.88rem;font-weight:700;color:var(--cyan);margin-bottom:4px}
+    .guarantee p{font-size:.83rem;color:var(--muted);margin:0}
+    .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+    .pill{background:rgba(0,229,192,.07);border:1px solid rgba(0,229,192,.2);color:var(--cyan);font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:999px}
+
+    /* CTA */
+    .cta-sec{padding:110px 0;text-align:center;background:radial-gradient(ellipse 65% 55% at 50% 50%,rgba(0,229,192,.05),transparent)}
+    .cta-sec h2{font-size:clamp(2rem,4.5vw,3.5rem);margin-bottom:16px}
+    .cta-sec p{color:var(--muted);max-width:470px;margin:0 auto 34px;font-size:1rem}
+    .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+    /* FOOTER */
+    footer{background:var(--bg2);border-top:1px solid var(--border);padding:34px 0}
+    .fi{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
+    .fb{font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem}
+    .fb span{color:var(--cyan)}
+    footer p{font-size:.8rem;color:var(--muted)}
+    .fl{display:flex;gap:22px}
+    .fl a{font-size:.8rem;color:var(--muted);text-decoration:none;transition:color .2s}
+    .fl a:hover{color:var(--cyan)}
+
+    /* WHATSAPP */
+    .wf{position:fixed;bottom:26px;left:26px;z-index:9999;width:54px;height:54px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.45rem;box-shadow:0 4px 18px rgba(37,211,102,.4);transition:transform .25s,box-shadow .25s}
+    .wf:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.55)}
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="container">
-      <img src="logo.jpg" alt="Logo de PyTekAI" class="logo">
-      <h1>PyTekAI</h1>
-      <p>Te ayudamos a automatizar procesos, tomar decisiones con datos, optimizar recursos, ser mas eficientes sin complicaciones técnicas y escalar tu operación con herramientas inteligentes adaptadas a tu negocio.</p>
-      <a href="https://wa.me/573507894900?text=Hola,%20quiero%20más%20información%20sobre%20PyTekAI" target="_blank" class="cta-button">
-        🚀 Agenda tu diagnóstico gratuito.
+
+<canvas id="gc"></canvas>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nb"><img src="logo.jpg" alt="PyTekAI">Py<span>Tek</span>AI</a>
+  <ul class="nl">
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#precios">Precios</a></li>
+    <li><a href="#clientes">Clientes</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#contacto" class="nc">Contactar →</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hlw">
+    <img src="logo.jpg" alt="PyTekAI" class="hli">
+    <div class="hlr"></div>
+  </div>
+  <div class="badge">IA para empresas reales · Colombia &amp; Florida</div>
+  <h1>Automatiza,<br>escala con <span class="ac">IA.</span></h1>
+  <p>Transformamos tu empresa con inteligencia artificial, automatización y tecnología a medida — sin complicaciones técnicas ni costos ocultos.</p>
+  <div class="ha">
+    <a href="https://wa.me/573507894900?text=Hola,%20quiero%20más%20información%20sobre%20PyTekAI" target="_blank" class="bp">🚀 Diagnóstico gratuito</a>
+    <a href="https://forms.gle/xp8f22nAn4nGUdKF6" target="_blank" class="bg">Ver demo →</a>
+  </div>
+  <div class="hstats">
+    <div class="si"><div class="sn">24h</div><div class="sl">Tiempo de respuesta</div></div>
+    <div class="si"><div class="sn">40–60%</div><div class="sl">Más valor vs. competencia</div></div>
+    <div class="si"><div class="sn">100%</div><div class="sl">Personalizado</div></div>
+    <div class="si"><div class="sn">30d</div><div class="sl">Garantía total</div></div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="dark sp">
+  <div class="ct">
+    <div class="reveal"><div class="stag">Por qué elegirnos</div><h2>Tecnología poderosa,<br>sin complejidad.</h2><p class="sub">Diseñamos soluciones que se adaptan a tu operación real, no al revés.</p></div>
+    <div class="grid3">
+      <div class="card reveal"><div class="ci">🤖</div><h3>IA accesible</h3><p>Chatbots, asistentes virtuales y automatización pensados para que tu equipo los use desde el primer día.</p></div>
+      <div class="card reveal"><div class="ci">🎯</div><h3>Soluciones a medida</h3><p>CRMs, paneles IoT, pipelines ETL y flujos inteligentes diseñados específicamente para tu negocio.</p></div>
+      <div class="card reveal"><div class="ci">💰</div><h3>Precio-valor excepcional</h3><p>Entre 40% y 60% más valor que competidores del mercado estadounidense, sin sacrificar calidad.</p></div>
+      <div class="card reveal"><div class="ci">⚡</div><h3>Implementación ágil</h3><p>MVPs funcionales en semanas. Sprints con demos quincenales y ajustes iterativos en tiempo real.</p></div>
+      <div class="card reveal"><div class="ci">🔗</div><h3>Integración garantizada</h3><p>Conectamos con ERPs legacy, APIs modernas y SaaS. Tus herramientas actuales no son un obstáculo.</p></div>
+      <div class="card reveal"><div class="ci">🔒</div><h3>Seguridad por diseño</h3><p>Encriptación end-to-end, autenticación robusta y auditorías de código desde la fase de arquitectura.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="servicios" class="sp">
+  <div class="ct">
+    <div class="reveal"><div class="stag">Servicios</div><h2>Todo lo que construimos<br>para ti.</h2></div>
+    <div class="tabs reveal">
+      <button class="tab active" onclick="switchTab('analisis',this)">📊 Análisis de Datos</button>
+      <button class="tab" onclick="switchTab('desarrollo',this)">💻 Desarrollo a Medida</button>
+      <button class="tab" onclick="switchTab('automatizacion',this)">⚙️ Automatización &amp; IoT</button>
+    </div>
+    <div id="tab-analisis" class="tab-panel active">
+      <div class="sc featured"><div class="snum">01</div><div class="sb"><div class="sticker">Más popular</div><h3>Análisis Operacional de Datos</h3><p>Mapeo de flujos de información, pipelines ETL robustos y un bot IA que analiza tus datos y te envía alertas accionables diariamente: "Rendimiento +23% hoy", "Inventario crítico en producto X".</p></div></div>
+      <div class="sc"><div class="snum">02</div><div class="sb"><h3>Pipelines ETL personalizados</h3><p>Extracción, transformación y carga de múltiples fuentes. Limpieza, estandarización y consolidación automatizada en repositorios listos para análisis profundo.</p></div></div>
+      <div class="sc"><div class="snum">03</div><div class="sb"><h3>Bot de Inteligencia Automatizada</h3><p>Asistente digital que identifica patrones y anomalías. Notificaciones contextuales con historial y sugerencias concretas de acción en tu canal preferido.</p></div></div>
+    </div>
+    <div id="tab-desarrollo" class="tab-panel">
+      <div class="sc featured"><div class="snum">01</div><div class="sb"><div class="sticker">Full-Stack</div><h3>Aplicaciones Empresariales a Medida</h3><p>Desde herramientas departamentales hasta plataformas con múltiples módulos, integraciones legacy, interfaces sofisticadas y procesamiento de datos a escala.</p></div></div>
+      <div class="sc"><div class="snum">02</div><div class="sb"><h3>CRM / ERP personalizados</h3><p>Sistemas de gestión adaptados a tus procesos: clientes, proyectos, inventario, facturación automática e integraciones con tu ecosistema actual.</p></div></div>
+      <div class="sc"><div class="snum">03</div><div class="sb"><h3>Plataformas &amp; Dashboards</h3><p>Paneles de control en tiempo real, gestión omnicanal, integraciones con APIs de terceros y flujos de trabajo automatizados con UX responsive.</p></div></div>
+    </div>
+    <div id="tab-automatizacion" class="tab-panel">
+      <div class="sc featured"><div class="snum">01</div><div class="sb"><div class="sticker">24/7</div><h3>Chatbots Inteligentes</h3><p>Asistentes virtuales con IA para tu sitio web y WhatsApp. Responden, califican leads y escalan consultas complejas automáticamente las 24 horas.</p></div></div>
+      <div class="sc"><div class="snum">02</div><div class="sb"><h3>Automatización de Procesos</h3><p>Flujos inteligentes, scripts y APIs personalizadas que eliminan tareas repetitivas y conectan tus herramientas actuales sin fricción.</p></div></div>
+      <div class="sc"><div class="snum">03</div><div class="sb"><h3>IoT &amp; Monitoreo en Tiempo Real</h3><p>Sensores y equipos monitoreados desde paneles personalizados. Detecta fallas antes de que ocurran, desde cualquier dispositivo.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="precios" class="dark sp">
+  <div class="ct">
+    <div class="reveal"><div class="stag">Precios</div><h2>Inversión clara,<br>sin sorpresas.</h2><p class="sub">Servicios similares en EE.UU. cuestan entre $5K y $200K. Nosotros ofrecemos el mismo nivel a una fracción del costo.</p></div>
+    <div class="price-grid">
+      <div class="pc reveal">
+        <div class="pc-name">Análisis Operacional</div>
+        <div class="pc-price">$2.5K</div>
+        <div class="pc-sub">Inversión inicial · +$50/mes mantenimiento</div>
+        <ul class="pc-list">
+          <li>Desarrollo de ETLs ($1,500)</li>
+          <li>Configuración del Bot IA ($1,000)</li>
+          <li>Monitoreo y soporte continuo</li>
+          <li>Alertas y recomendaciones diarias</li>
+          <li>Paquete anual $3,100 (ahorra $100)</li>
+        </ul>
+        <a href="https://wa.me/573507894900?text=Me%20interesa%20el%20plan%20de%20Análisis%20Operacional" target="_blank" class="pc-btn ghost">Consultar →</a>
+      </div>
+      <div class="pc hl reveal">
+        <div class="pc-badge">Más pedido</div>
+        <div class="pc-name">Producto a Medida</div>
+        <div class="pc-price">$15K–20K</div>
+        <div class="pc-sub">Aplicación completa · precio fijo</div>
+        <ul class="pc-list">
+          <li>Aplicación full-stack completa</li>
+          <li>Múltiples módulos funcionales</li>
+          <li>Integraciones con APIs de terceros</li>
+          <li>Dashboards analíticos incluidos</li>
+          <li>Testing, QA y documentación técnica</li>
+        </ul>
+        <a href="https://wa.me/573507894900?text=Me%20interesa%20un%20desarrollo%20a%20medida" target="_blank" class="pc-btn primary">Agendar diagnóstico</a>
+      </div>
+      <div class="pc reveal">
+        <div class="pc-name">Plataforma Empresarial</div>
+        <div class="pc-price">$20K+</div>
+        <div class="pc-sub">Alta complejidad · cotización a medida</div>
+        <ul class="pc-list">
+          <li>Arquitectura de microservicios</li>
+          <li>Escalabilidad horizontal cloud-native</li>
+          <li>Integraciones complejas y legacy</li>
+          <li>Seguridad empresarial avanzada</li>
+          <li>SLAs y soporte dedicado</li>
+        </ul>
+        <a href="mailto:pytekia@gmail.com" class="pc-btn ghost">Solicitar propuesta →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLIENTS -->
+<section id="clientes" class="sp">
+  <div class="ct">
+    <div class="reveal"><div class="stag">Clientes</div><h2>Empresas que ya<br>confían en nosotros.</h2></div>
+    <div class="cg">
+      <a href="https://davana-group.odoo.com/" target="_blank" class="cc reveal">
+        <div class="cp"><span class="cp-icon">🏢</span><div class="cp-bar"></div></div>
+        <div class="ci2">
+          <div class="ctype">ERP / CRM · Puerto Rico</div>
+          <h3>Davana Group</h3>
+          <p>Implementación de APP empresarial, automatización de procesos operativos, gestión de información e integración de servicios en plataforma Odoo.</p>
+          <span class="cl">davana-group.odoo.com ↗</span>
+        </div>
+      </a>
+      <a href="https://www.lazonain.com/" target="_blank" class="cc reveal">
+        <div class="cp"><span class="cp-icon">🏠</span><div class="cp-bar"></div></div>
+        <div class="ci2">
+          <div class="ctype">Web &amp; Modelos de inversión · Bogotá</div>
+          <h3>La Zona In</h3>
+          <p>Desarrollo de sitio web, estrategia de contenido en redes sociales y modelos de inversión en finca raíz para agencia inmobiliaria.</p>
+          <span class="cl">lazonain.com ↗</span>
+        </div>
       </a>
     </div>
-  </header>
-
-  <section class="intro">
-    <div class="container">
-      <h2>Impulsa tu negocio con IA</h2>
-      <p>Desarrollamos e implementamos soluciones tecnológicas para la transformación digital de las PYMES.</p>
-    </div>
-  </section>
-
-  <section class="benefits">
-    <div class="container">
-      <h2>¿Por qué elegir PyTekAI?</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>IA accesible</h3>
-          <p>Implementamos chatbots, asistentes virtuales y automatización con herramientas fáciles de usar.</p>
-        </div>
-        <div class="card">
-          <h3>Soluciones personalizadas</h3>
-          <p>Diseñamos plataformas CRM, paneles IoT, reportes automáticos y más según tu negocio.</p>
-        </div>
-        <div class="card">
-          <h3>Hecho para PYMES</h3>
-          <p>Conocemos tus retos. Te ofrecemos tecnología poderosa, sin complicaciones ni costos ocultos.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="servicios">
-    <div class="container">
-      <h2>Servicios que ofrecemos</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Chatbots inteligentes</h3>
-          <p>Asistentes virtuales que responden automáticamente en tu web o WhatsApp, 24/7.</p>
-        </div>
-        <div class="card">
-          <h3>Automatización de procesos</h3>
-          <p>Reducción de tareas manuales con flujos inteligentes, scripts y APIs personalizados.</p>
-        </div>
-        <div class="card">
-          <h3>IoT y dashboards</h3>
-          <p>Monitoreo en tiempo real de sensores, equipos y procesos desde paneles personalizados.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="testimonios">
-    <div class="container">
-      <h2>Lo que dicen nuestros clientes</h2>
-      <div class="grid">
-        <div class="testimonio">
-          <p>"Gracias a PyTekAI automatizamos la atención al cliente. ¡Nos ahorramos más de 20 horas al mes!"</p>
-          <span>– Laura G., Gerente de tienda</span>
-        </div>
-        <div class="testimonio">
-          <p>"Instalamos un sistema IoT en nuestra planta y ahora monitoreamos todo en tiempo real."</p>
-          <span>– Carlos P., Producción</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="about">
-    <div class="container">
-      <h2>¿Quiénes somos?</h2>
-      <p>En PyTekAI, democratizamos la tecnología para las PYMES.Combinamos innovación y tecnología real para que cualquier PYME, sin importar su tamaño, acceda al poder de la inteligencia artificial.</p>
-    </div>
-  </section>
-<section id="contacto-demo" style="padding: 60px 20px; background-color: #f0f4fa; text-align: center;">
-  <h2 style="font-size: 2.2rem; margin-bottom: 16px; color: #1a1a1a;">Transforma tu negocio</h2>
-  <p style="font-size: 1.15rem; color: #333; margin-bottom: 24px;">
-    Solicita tu demo gratuita o una propuesta personalizada. Nuestro equipo de expertos responderá en menos de 24 horas.
-  </p>
-  <a href="mailto:pytekia@gmail.com" style="display: inline-block; margin: 10px; background-color: #25a0e0; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold;">
-    📧 Escribir a pytekia@gmail.com
-  </a>
-  <a href="https://forms.gle/xp8f22nAn4nGUdKF6" target="_blank" style="display: inline-block; margin: 10px; background-color: #007bff; color: white; padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold;">
-    🚀 Solicitar demo gratuita
-  </a>
+  </div>
 </section>
-  <footer>
-    <div class="container">
-      <p>© 2025 PyTekAI – Todos los derechos reservados</p>
+
+<!-- SECTORS -->
+<section class="dark sp">
+  <div class="ct">
+    <div class="reveal"><div class="stag">Sectores</div><h2>Soluciones para<br>cualquier industria.</h2></div>
+    <div class="sg">
+      <div class="sec reveal"><div class="sec-i">🍽️</div><h4>Restaurantes</h4><p>Análisis de ventas por plato, inventario en tiempo real y alertas de eficiencia de servicio.</p></div>
+      <div class="sec reveal"><div class="sec-i">🛍️</div><h4>Retail</h4><p>Gestión omnicanal, inventario multi-bodega y dashboards de comportamiento de clientes.</p></div>
+      <div class="sec reveal"><div class="sec-i">🚚</div><h4>Logística</h4><p>Seguimiento de envíos, optimización de rutas y notificaciones automáticas a clientes.</p></div>
+      <div class="sec reveal"><div class="sec-i">🏥</div><h4>Salud</h4><p>Gestión de pacientes, historiales clínicos electrónicos y agendamiento inteligente.</p></div>
+      <div class="sec reveal"><div class="sec-i">🎓</div><h4>Educación</h4><p>Plataformas de aprendizaje, gestión académica y analítica estudiantil.</p></div>
+      <div class="sec reveal"><div class="sec-i">🏭</div><h4>Manufactura</h4><p>Control de producción, mantenimiento predictivo y gestión de calidad.</p></div>
+      <div class="sec reveal"><div class="sec-i">💳</div><h4>Finanzas</h4><p>Procesamiento de transacciones, scoring crediticio y detección de fraude.</p></div>
+      <div class="sec reveal"><div class="sec-i">🏡</div><h4>Inmobiliario</h4><p>CRMs de propiedades, modelos de inversión y transformación digital completa.</p></div>
     </div>
-  </footer>
-  <!-- Botón flotante de WhatsApp -->
-  <a href="https://wa.me/573507894900" class="whatsapp-float" target="_blank" title="Chatea con nosotros por WhatsApp">
-    💬
-  </a>
-  <script>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="proceso" class="sp">
+  <div class="ct">
+    <div class="reveal"><div class="stag">Proceso</div><h2>De cero a funcional<br>en semanas.</h2><p class="sub">Un camino claro que minimiza riesgos y maximiza resultados desde la primera semana.</p></div>
+    <div class="ps">
+      <div class="psi reveal"><div class="psd">01</div><div class="psb"><h3>Consulta inicial gratuita</h3><p>60 minutos para entender tus desafíos, objetivos y contexto tecnológico. Sin compromisos.</p></div></div>
+      <div class="psi reveal"><div class="psd">02</div><div class="psb"><h3>Propuesta personalizada</h3><p>En 48 horas entregamos propuesta técnica con alcance, cronograma, inversión y ROI proyectado.</p></div></div>
+      <div class="psi reveal"><div class="psd">03</div><div class="psb"><h3>Fase de descubrimiento</h3><p>Análisis de requisitos y diseño de arquitectura en 1–2 semanas con entregables documentados.</p></div></div>
+      <div class="psi reveal"><div class="psd">04</div><div class="psb"><h3>Desarrollo e implementación</h3><p>Sprints ágiles con demos quincenales, ajustes iterativos y comunicación constante hasta producción.</p></div></div>
+      <div class="psi reveal"><div class="psd">05</div><div class="psb"><h3>Soporte y optimización continua</h3><p>Monitoreo proactivo, actualizaciones regulares y evolución del producto según feedback real.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERSHIP -->
+<section class="darker sp">
+  <div class="ct">
+    <div class="reveal"><div class="stag">Partnerships</div><h2>Modelo de tercerización<br>comercial.</h2><p class="sub">¿Tienes un producto tech pero necesitas canal de ventas? Trabajamos contigo en un modelo que alinea incentivos.</p></div>
+    <div class="pg">
+      <div class="pct full reveal">
+        <div class="dw">
+          <div class="di"><div class="dr" style="--p:270deg"><div class="dv">75%</div></div><div class="dl">PyTekAI</div></div>
+          <div class="di"><div class="dr" style="--p:54deg"><div class="dv">15%</div></div><div class="dl">Comercial</div></div>
+          <div class="di"><div class="dr" style="--p:36deg"><div class="dv">10%</div></div><div class="dl">Margen</div></div>
+        </div>
+        <div>
+          <h3>Distribución de ingresos</h3>
+          <p>El comercializador recibe 15% por contrato cerrado. PyTekAI cubre 75% de costos operativos, técnicos y de soporte. El 10% restante es margen flexible según volumen. Trabajamos con Node.js y tecnologías modernas para despliegues ágiles.</p>
+        </div>
+      </div>
+      <div class="pct reveal"><h3>¿Para quién es?</h3><p>Startups y empresas de software que desarrollaron soluciones sólidas pero necesitan infraestructura comercial para penetrar mercados o escalar ventas.</p></div>
+      <div class="pct reveal"><h3>¿Qué aportamos?</h3><p>Red comercial activa, experiencia en Colombia y EE.UU., gestión de contratos y soporte técnico completo post-venta para cada cliente.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="dark sp">
+  <div class="ct">
+    <div class="reveal"><div class="stag">Testimonios</div><h2>Lo que dicen<br>nuestros clientes.</h2></div>
+    <div class="tg">
+      <div class="tc reveal"><p class="tc-t">Gracias a PyTekAI automatizamos la atención al cliente. Ahorramos más de 20 horas al mes y el equipo se enfoca en lo que realmente importa.</p><div class="tc-a"><div class="tc-av">LG</div><div><div class="tc-stars">★★★★★</div><div class="tc-name">Laura G.</div><div class="tc-role">Gerente de tienda</div></div></div></div>
+      <div class="tc reveal"><p class="tc-t">Instalamos IoT en nuestra planta y ahora monitoreamos todo en tiempo real desde el celular. Detectamos fallas antes de que ocurran.</p><div class="tc-a"><div class="tc-av">CP</div><div><div class="tc-stars">★★★★★</div><div class="tc-name">Carlos P.</div><div class="tc-role">Jefe de Producción</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="nosotros" class="sp">
+  <div class="ct">
+    <div class="ag">
+      <div class="av reveal">
+        <div class="ao" style="width:185px;height:185px"></div>
+        <div class="ao" style="width:285px;height:285px"></div>
+        <div class="aw"><img src="logo.jpg" alt="PyTekAI"></div>
+      </div>
+      <div class="at reveal">
+        <div class="stag">Quiénes somos</div>
+        <h2>Democratizamos la IA para las PYMES.</h2>
+        <p>En PyTekAI creemos que la tecnología de punta no es exclusiva de las grandes corporaciones. Combinamos innovación real con un profundo entendimiento de los retos cotidianos de pequeñas y medianas empresas.</p>
+        <p>Desde Bogotá y Fort Lauderdale acompañamos negocios en Latinoamérica y Estados Unidos en su transformación digital con soluciones que realmente funcionan.</p>
+        <div class="guarantee"><h4>🛡️ Garantía de satisfacción 30 días</h4><p>Si en los primeros 30 días no estás satisfecho, reembolsamos el 100% de tu inversión. Sin preguntas.</p></div>
+        <div class="pills">
+          <span class="pill">Inteligencia Artificial</span>
+          <span class="pill">Automatización</span>
+          <span class="pill">IoT</span>
+          <span class="pill">Chatbots</span>
+          <span class="pill">ETL / Data</span>
+          <span class="pill">Colombia · EE.UU.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contacto" class="cta-sec">
+  <div class="ct">
+    <div class="reveal">
+      <div class="stag">Comencemos</div>
+      <h2>Transforma tu negocio<br>hoy mismo.</h2>
+      <p>Diagnóstico gratuito o propuesta personalizada. Respondemos en menos de 24 horas.</p>
+      <div class="cta-btns">
+        <a href="https://wa.me/573507894900?text=Hola,%20quiero%20más%20información%20sobre%20PyTekAI" target="_blank" class="bp">💬 WhatsApp directo</a>
+        <a href="mailto:pytekia@gmail.com" class="bg">📧 pytekia@gmail.com</a>
+        <a href="https://forms.gle/xp8f22nAn4nGUdKF6" target="_blank" class="bg">🚀 Formulario de demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ct">
+    <div class="fi">
+      <div class="fb">Py<span>Tek</span>AI</div>
+      <p>© 2025 PyTekAI · Bogotá &amp; Fort Lauderdale · Todos los derechos reservados</p>
+      <div class="fl"><a href="mailto:pytekia@gmail.com">Contacto</a><a href="https://wa.me/573507894900">WhatsApp</a></div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp flotante izquierda (Chatbase queda libre a la derecha) -->
+<a href="https://wa.me/573507894900" class="wf" target="_blank" title="WhatsApp">💬</a>
+
+<!-- ✅ CHATBASE ORIGINAL - script exacto -->
+<script>
 (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="njKXaJ7PiewT2sh8nex5F";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+
+<script>
+/* GRID CANVAS */
+(function(){
+  const c=document.getElementById('gc'),x=c.getContext('2d');
+  let W,H,t=0;
+  function r(){W=c.width=innerWidth;H=c.height=innerHeight;}
+  r();addEventListener('resize',r);
+  function d(){
+    x.clearRect(0,0,W,H);
+    const cw=60,ch=60,cols=Math.ceil(W/cw),rows=Math.ceil(H/ch);
+    x.strokeStyle='rgba(0,229,192,0.14)';x.lineWidth=.5;
+    for(let i=0;i<=cols;i++){x.beginPath();x.moveTo(i*cw,0);x.lineTo(i*cw,H);x.stroke();}
+    for(let j=0;j<=rows;j++){x.beginPath();x.moveTo(0,j*ch);x.lineTo(W,j*ch);x.stroke();}
+    for(let i=0;i<=cols;i++)for(let j=0;j<=rows;j++){
+      const w=Math.sin(t*.016+i*.38+j*.28);
+      if(w>.72){const a=(w-.72)/.28;x.beginPath();x.arc(i*cw,j*ch,2.2,0,Math.PI*2);x.fillStyle=`rgba(0,229,192,${a*.8})`;x.fill();}
+    }
+    t++;requestAnimationFrame(d);
+  }
+  d();
+})();
+
+/* SCROLL REVEAL */
+(function(){
+  const els=document.querySelectorAll('.reveal');
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach((e,i)=>{if(e.isIntersecting){setTimeout(()=>e.target.classList.add('v'),i*65);io.unobserve(e.target);}});
+  },{threshold:.1});
+  els.forEach(el=>io.observe(el));
+})();
+
+/* NAV */
+(function(){
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>{nav.style.background=scrollY>40?'rgba(6,9,15,.97)':'rgba(6,9,15,.8)';});
+})();
+
+/* TABS */
+function switchTab(id,btn){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
 </script>
 </body>
 </html>
