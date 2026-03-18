@@ -16,7 +16,7 @@
   <link rel="canonical" href="https://pytekai.netlify.app/" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
   <link rel="icon" href="favicon.png" type="image/png" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -33,7 +33,7 @@
 
     /* NAV */
     nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:16px 5vw;background:rgba(6,9,15,.8);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);transition:background .3s}
-    .nb{display:flex;align-items:center;gap:10px;font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none;letter-spacing:-.4px}
+    .nb{display:flex;align-items:center;gap:10px;font-family:'Manrope',sans-serif;font-size:1.3rem;font-weight:800;color:var(--text);text-decoration:none;letter-spacing:0}
     .nb img{width:32px;height:32px;border-radius:8px;object-fit:cover}
     .nb span{color:var(--cyan)}
     .nl{display:flex;gap:28px;list-style:none}
@@ -52,7 +52,7 @@
     .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,229,192,.08);border:1px solid rgba(0,229,192,.25);color:var(--cyan);font-size:.72rem;font-weight:700;padding:6px 16px;border-radius:999px;margin-bottom:26px;letter-spacing:.1em;text-transform:uppercase;animation:fu .8s .05s ease both}
     .badge::before{content:'';width:7px;height:7px;background:var(--cyan);border-radius:50%;animation:pulse 1.8s infinite}
     @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(1.5)}}
-    h1{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,7.5vw,6.5rem);font-weight:800;line-height:1.02;letter-spacing:-3px;margin-bottom:22px;animation:fu .9s .1s ease both}
+    h1{font-family:'Manrope',sans-serif;font-size:clamp(2.8rem,7.5vw,6.5rem);font-weight:800;line-height:1.02;letter-spacing:-.5px;margin-bottom:22px;animation:fu .9s .1s ease both}
     h1 .ac{color:var(--cyan)}
     .hero>p{max-width:600px;font-size:1.08rem;color:var(--muted);font-weight:300;margin:0 auto 38px;animation:fu 1s .2s ease both}
     .ha{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;animation:fu 1s .3s ease both}
@@ -62,7 +62,7 @@
     .bg:hover{border-color:var(--cyan);color:var(--cyan)}
     .hstats{display:flex;gap:48px;flex-wrap:wrap;justify-content:center;margin-top:64px;padding-top:44px;border-top:1px solid var(--border);animation:fu 1s .45s ease both}
     .si{text-align:center}
-    .sn{font-family:'Syne',sans-serif;font-size:2.2rem;font-weight:800;color:var(--cyan);line-height:1}
+    .sn{font-family:'Manrope',sans-serif;font-size:2.2rem;font-weight:800;color:var(--cyan);line-height:1}
     .sl{font-size:.78rem;color:var(--muted);margin-top:4px}
     @keyframes fu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
 
@@ -73,7 +73,7 @@
     .dark{background:var(--bg2)}
     .darker{background:var(--bg3)}
     .stag{display:inline-block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-bottom:12px}
-    h2{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;line-height:1.1;letter-spacing:-1.2px;margin-bottom:16px;color:var(--text)}
+    h2{font-family:'Manrope',sans-serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;line-height:1.1;letter-spacing:-.1px;margin-bottom:16px;color:var(--text)}
     .sub{color:var(--muted);max-width:520px;font-size:1rem;font-weight:300}
     .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
     .reveal.v{opacity:1;transform:translateY(0)}
@@ -85,7 +85,7 @@
     .card:hover{border-color:rgba(0,229,192,.4);transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,0,0,.4)}
     .card:hover::before{opacity:1}
     .ci{width:46px;height:46px;display:flex;align-items:center;justify-content:center;background:rgba(0,229,192,.1);border-radius:11px;font-size:1.35rem;margin-bottom:18px}
-    .card h3{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:9px;letter-spacing:-.3px}
+    .card h3{font-family:'Manrope',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:9px;letter-spacing:-.1px}
     .card p{font-size:.92rem;color:var(--muted);line-height:1.65}
 
     /* TABS */
@@ -99,8 +99,8 @@
     .sc:hover{border-color:rgba(0,229,192,.35);transform:translateY(-3px)}
     .sc.featured{grid-column:span 2;background:linear-gradient(135deg,rgba(0,229,192,.05),rgba(26,107,255,.05));border-color:rgba(0,229,192,.25)}
     @media(max-width:640px){.sc.featured{grid-column:span 1}}
-    .snum{font-family:'Syne',sans-serif;font-size:2.4rem;font-weight:800;color:rgba(0,229,192,.13);line-height:1;flex-shrink:0;width:50px}
-    .sb h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:8px;letter-spacing:-.3px}
+    .snum{font-family:'Manrope',sans-serif;font-size:2.4rem;font-weight:800;color:rgba(0,229,192,.13);line-height:1;flex-shrink:0;width:50px}
+    .sb h3{font-family:'Manrope',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:8px;letter-spacing:-.1px}
     .sb p{font-size:.9rem;color:var(--muted);line-height:1.65}
     .sticker{display:inline-block;background:rgba(0,229,192,.12);color:var(--cyan);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:999px;margin-bottom:8px}
 
@@ -110,8 +110,8 @@
     .pc:hover{border-color:rgba(0,229,192,.35);transform:translateY(-4px)}
     .pc.hl{border-color:rgba(0,229,192,.4);background:linear-gradient(145deg,rgba(0,229,192,.06),rgba(26,107,255,.04))}
     .pc-badge{position:absolute;top:18px;right:18px;background:var(--cyan);color:#06090f;font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
-    .pc-name{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:700;color:var(--muted);margin-bottom:10px}
-    .pc-price{font-family:'Syne',sans-serif;font-size:2.8rem;font-weight:800;color:var(--cyan);line-height:1;margin-bottom:4px}
+    .pc-name{font-family:'Manrope',sans-serif;font-size:.95rem;font-weight:700;color:var(--muted);margin-bottom:10px}
+    .pc-price{font-family:'Manrope',sans-serif;font-size:2.8rem;font-weight:800;color:var(--cyan);line-height:1;margin-bottom:4px}
     .pc-sub{font-size:.8rem;color:var(--muted);margin-bottom:22px}
     .pc-list{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:26px}
     .pc-list li{font-size:.88rem;color:var(--muted);display:flex;gap:9px;align-items:flex-start}
@@ -131,7 +131,7 @@
     .cp-bar{position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue))}
     .ci2{padding:22px 24px}
     .ctype{font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan);margin-bottom:6px}
-    .ci2 h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;margin-bottom:6px;color:var(--text)}
+    .ci2 h3{font-family:'Manrope',sans-serif;font-size:1rem;font-weight:700;margin-bottom:6px;color:var(--text)}
     .ci2 p{font-size:.85rem;color:var(--muted);line-height:1.55}
     .cl{display:inline-flex;align-items:center;gap:5px;margin-top:10px;font-size:.8rem;color:var(--cyan);font-weight:600}
 
@@ -140,7 +140,7 @@
     .sec{background:rgba(255,255,255,.02);border:1px solid var(--border);border-radius:10px;padding:20px 18px;transition:border-color .25s,background .25s}
     .sec:hover{border-color:rgba(0,229,192,.3);background:rgba(0,229,192,.04)}
     .sec-i{font-size:1.5rem;margin-bottom:8px}
-    .sec h4{font-family:'Syne',sans-serif;font-size:.88rem;font-weight:700;margin-bottom:4px}
+    .sec h4{font-family:'Manrope',sans-serif;font-size:.88rem;font-weight:700;margin-bottom:4px}
     .sec p{font-size:.78rem;color:var(--muted);line-height:1.5}
 
     /* PROCESS */
@@ -148,8 +148,8 @@
     .psi{display:flex;gap:24px;align-items:flex-start;padding-bottom:38px;position:relative}
     .psi::after{content:'';position:absolute;left:18px;top:40px;bottom:0;width:1.5px;background:linear-gradient(180deg,var(--cyan),transparent)}
     .psi:last-child::after{display:none}
-    .psd{flex-shrink:0;width:38px;height:38px;border-radius:50%;background:rgba(0,229,192,.1);border:2px solid var(--cyan);display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:.78rem;color:var(--cyan)}
-    .psb h3{font-family:'Syne',sans-serif;font-size:1.02rem;font-weight:700;margin-bottom:5px;letter-spacing:-.2px}
+    .psd{flex-shrink:0;width:38px;height:38px;border-radius:50%;background:rgba(0,229,192,.1);border:2px solid var(--cyan);display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:800;font-size:.78rem;color:var(--cyan)}
+    .psb h3{font-family:'Manrope',sans-serif;font-size:1.02rem;font-weight:700;margin-bottom:5px;letter-spacing:0}
     .psb p{font-size:.88rem;color:var(--muted)}
 
     /* PARTNERSHIP */
@@ -158,22 +158,22 @@
     .pct{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:32px 28px}
     .pct.full{grid-column:span 2;display:flex;gap:36px;align-items:center}
     @media(max-width:640px){.pct.full{grid-column:span 1;flex-direction:column;gap:20px}}
-    .pct h3{font-family:'Syne',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:8px}
+    .pct h3{font-family:'Manrope',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:8px}
     .pct p{font-size:.88rem;color:var(--muted)}
     .dw{display:flex;gap:24px;flex-shrink:0}
     .di{text-align:center}
     .dr{width:78px;height:78px;border-radius:50%;background:conic-gradient(var(--cyan) var(--p),rgba(255,255,255,.07) 0);display:flex;align-items:center;justify-content:center;margin-bottom:7px;box-shadow:inset 0 0 0 13px var(--bg3)}
-    .dv{font-family:'Syne',sans-serif;font-size:.95rem;font-weight:800;color:var(--text)}
+    .dv{font-family:'Manrope',sans-serif;font-size:.95rem;font-weight:800;color:var(--text)}
     .dl{font-size:.7rem;color:var(--muted);font-weight:600}
 
     /* TESTIMONIALS */
     .tg{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:48px}
     @media(max-width:640px){.tg{grid-template-columns:1fr}}
     .tc{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:32px;position:relative}
-    .tc::before{content:'"';position:absolute;top:12px;left:24px;font-size:3.5rem;font-family:'Syne',sans-serif;font-weight:800;color:var(--cyan);opacity:.22;line-height:1}
+    .tc::before{content:'"';position:absolute;top:12px;left:24px;font-size:3.5rem;font-family:'Manrope',sans-serif;font-weight:800;color:var(--cyan);opacity:.22;line-height:1}
     .tc-t{font-size:.98rem;color:var(--text);font-weight:300;margin-bottom:20px;padding-top:8px}
     .tc-a{display:flex;align-items:center;gap:10px}
-    .tc-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--blue));display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:.82rem;color:#06090f}
+    .tc-av{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--blue));display:flex;align-items:center;justify-content:center;font-family:'Manrope',sans-serif;font-weight:800;font-size:.82rem;color:#06090f}
     .tc-stars{color:#f4c430;font-size:.78rem;letter-spacing:2px;margin-bottom:2px}
     .tc-name{font-weight:600;font-size:.86rem}
     .tc-role{font-size:.76rem;color:var(--muted)}
@@ -189,7 +189,7 @@
     .aw img{width:100%;height:100%;object-fit:cover}
     .at p{color:var(--muted);margin-bottom:14px;font-weight:300}
     .guarantee{margin-top:26px;background:rgba(0,229,192,.06);border:1px solid rgba(0,229,192,.2);border-radius:10px;padding:16px 18px}
-    .guarantee h4{font-family:'Syne',sans-serif;font-size:.88rem;font-weight:700;color:var(--cyan);margin-bottom:4px}
+    .guarantee h4{font-family:'Manrope',sans-serif;font-size:.88rem;font-weight:700;color:var(--cyan);margin-bottom:4px}
     .guarantee p{font-size:.83rem;color:var(--muted);margin:0}
     .pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
     .pill{background:rgba(0,229,192,.07);border:1px solid rgba(0,229,192,.2);color:var(--cyan);font-size:.75rem;font-weight:600;padding:5px 12px;border-radius:999px}
@@ -203,7 +203,7 @@
     /* FOOTER */
     footer{background:var(--bg2);border-top:1px solid var(--border);padding:34px 0}
     .fi{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px}
-    .fb{font-family:'Syne',sans-serif;font-weight:800;font-size:1.05rem}
+    .fb{font-family:'Manrope',sans-serif;font-weight:800;font-size:1.05rem}
     .fb span{color:var(--cyan)}
     footer p{font-size:.8rem;color:var(--muted)}
     .fl{display:flex;gap:22px}
@@ -213,6 +213,32 @@
     /* WHATSAPP */
     .wf{position:fixed;bottom:26px;left:26px;z-index:9999;width:54px;height:54px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.45rem;box-shadow:0 4px 18px rgba(37,211,102,.4);transition:transform .25s,box-shadow .25s}
     .wf:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.55)}
+
+    /* PORTFOLIO */
+    .pf-filter{display:flex;gap:8px;flex-wrap:wrap;margin:36px 0 28px}
+    .pf-btn{padding:8px 18px;border-radius:8px;border:1px solid var(--border);background:transparent;color:var(--muted);font-size:.82rem;font-weight:600;cursor:pointer;transition:all .25s;font-family:'DM Sans',sans-serif}
+    .pf-btn.active,.pf-btn:hover{background:rgba(0,229,192,.1);border-color:rgba(0,229,192,.35);color:var(--cyan)}
+    .pf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    @media(max-width:900px){.pf-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.pf-grid{grid-template-columns:1fr}}
+    .pf-card{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;text-decoration:none;display:block;transition:border-color .3s,transform .3s,box-shadow .3s;position:relative}
+    .pf-card:hover{border-color:rgba(0,229,192,.4);transform:translateY(-5px);box-shadow:0 24px 56px rgba(0,0,0,.5)}
+    .pf-card[data-cat].hidden{display:none}
+    .pf-thumb{height:200px;position:relative;overflow:hidden;background:var(--bg4)}
+    .pf-thumb iframe{width:250%;height:250%;transform:scale(.4) translate(-75%,-75%);border:none;pointer-events:none;position:absolute;top:0;left:0}
+    .pf-thumb-fallback{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:3.5rem;background:linear-gradient(135deg,rgba(0,229,192,.06),rgba(26,107,255,.04))}
+    .pf-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,9,15,.9) 0%,transparent 60%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:16px}
+    .pf-card:hover .pf-overlay{opacity:1}
+    .pf-visit{display:inline-flex;align-items:center;gap:6px;background:var(--cyan);color:#06090f;font-size:.78rem;font-weight:700;padding:7px 14px;border-radius:7px}
+    .pf-bar{position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--blue));transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+    .pf-card:hover .pf-bar{transform:scaleX(1)}
+    .pf-info{padding:20px 22px}
+    .pf-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+    .pf-tag{font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);background:rgba(0,229,192,.08);border:1px solid rgba(0,229,192,.15);padding:3px 8px;border-radius:999px}
+    .pf-info h3{font-family:'Manrope',sans-serif;font-size:1.05rem;font-weight:700;margin-bottom:6px;letter-spacing:0}
+    .pf-info p{font-size:.83rem;color:var(--muted);line-height:1.55;margin-bottom:12px}
+    .pf-features{display:flex;flex-wrap:wrap;gap:5px}
+    .pf-feat{font-size:.7rem;color:var(--muted);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);padding:2px 8px;border-radius:5px}
   </style>
 </head>
 <body>
@@ -226,6 +252,7 @@
     <li><a href="#servicios">Servicios</a></li>
     <li><a href="#precios">Precios</a></li>
     <li><a href="#clientes">Clientes</a></li>
+    <li><a href="#portafolio">Portafolio</a></li>
     <li><a href="#nosotros">Nosotros</a></li>
     <li><a href="#contacto" class="nc">Contactar →</a></li>
   </ul>
@@ -337,7 +364,7 @@
           <li>Seguridad empresarial avanzada</li>
           <li>SLAs y soporte dedicado</li>
         </ul>
-        <a href="mailto:pytekia@gmail.com" class="pc-btn ghost">Solicitar propuesta →</a>
+        <a href="/cdn-cgi/l/email-protection#77070e03121c1e1637101a161e1b5914181a" class="pc-btn ghost">Solicitar propuesta →</a>
       </div>
     </div>
   </div>
@@ -366,6 +393,129 @@
           <span class="cl">lazonain.com ↗</span>
         </div>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portafolio" class="dark sp">
+  <div class="ct">
+    <div class="reveal">
+      <div class="stag">Portafolio</div>
+      <h2>Proyectos que<br>hemos construido.</h2>
+      <p class="sub">Desde plataformas fintech y comunidades de trading hasta e-commerce de lujo. Cada producto, una historia de transformación real.</p>
+    </div>
+    <div class="pf-filter reveal">
+      <button class="pf-btn active" onclick="filterPF('all',this)">Todos</button>
+      <button class="pf-btn" onclick="filterPF('plataforma',this)">Plataformas</button>
+      <button class="pf-btn" onclick="filterPF('ecommerce',this)">E-commerce</button>
+      <button class="pf-btn" onclick="filterPF('comunidad',this)">Comunidades</button>
+      <button class="pf-btn" onclick="filterPF('fintech',this)">Fintech / IA</button>
+    </div>
+    <div class="pf-grid">
+
+      <!-- Blue Sharks -->
+      <a href="https://bluesharkstrading.netlify.app/" target="_blank" class="pf-card reveal" data-cat="comunidad fintech plataforma">
+        <div class="pf-thumb">
+          <div class="pf-thumb-fallback">🦈</div>
+        </div>
+        <div class="pf-overlay"><span class="pf-visit">Ver sitio ↗</span></div>
+        <div class="pf-bar"></div>
+        <div class="pf-info">
+          <div class="pf-tags"><span class="pf-tag">Comunidad</span><span class="pf-tag">Fintech</span><span class="pf-tag">IA</span></div>
+          <h3>Blue Sharks Trading</h3>
+          <p>Comunidad profesional de trading: copy trading, señales en vivo, mentoría, calculadora de riesgo, agentes IA, chatbot y mundo virtual 3D.</p>
+          <div class="pf-features">
+            <span class="pf-feat">Copy Trading</span><span class="pf-feat">Chatbot IA</span><span class="pf-feat">Risk Calc</span><span class="pf-feat">Mundo Virtual</span><span class="pf-feat">Señales</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- FutBetCoin -->
+      <a href="https://futbetcoin.netlify.app/" target="_blank" class="pf-card reveal" data-cat="fintech plataforma">
+        <div class="pf-thumb">
+          <div class="pf-thumb-fallback">⚽</div>
+        </div>
+        <div class="pf-overlay"><span class="pf-visit">Ver sitio ↗</span></div>
+        <div class="pf-bar"></div>
+        <div class="pf-info">
+          <div class="pf-tags"><span class="pf-tag">IA</span><span class="pf-tag">Fintech</span><span class="pf-tag">Deportes</span></div>
+          <h3>FutBetCoin</h3>
+          <p>Plataforma de pronósticos deportivos potenciada con inteligencia artificial. Análisis predictivo de partidos, estadísticas avanzadas y señales de apuestas.</p>
+          <div class="pf-features">
+            <span class="pf-feat">Pronósticos IA</span><span class="pf-feat">Estadísticas</span><span class="pf-feat">Señales</span><span class="pf-feat">Live</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Glowyski -->
+      <a href="https://glowyskin.netlify.app/" target="_blank" class="pf-card reveal" data-cat="ecommerce">
+        <div class="pf-thumb">
+          <div class="pf-thumb-fallback">✨</div>
+        </div>
+        <div class="pf-overlay"><span class="pf-visit">Ver sitio ↗</span></div>
+        <div class="pf-bar"></div>
+        <div class="pf-info">
+          <div class="pf-tags"><span class="pf-tag">E-commerce</span><span class="pf-tag">Lujo</span><span class="pf-tag">Belleza</span></div>
+          <h3>Glowy Skin</h3>
+          <p>Tienda online de maquillaje y skincare de alta gama. Diseño editorial de lujo, catálogo premium y experiencia de compra inmersiva.</p>
+          <div class="pf-features">
+            <span class="pf-feat">Tienda online</span><span class="pf-feat">Catálogo</span><span class="pf-feat">Checkout</span><span class="pf-feat">Diseño lujo</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Groove Street -->
+      <a href="https://groovestreet.netlify.app/" target="_blank" class="pf-card reveal" data-cat="ecommerce">
+        <div class="pf-thumb">
+          <div class="pf-thumb-fallback">🌿</div>
+        </div>
+        <div class="pf-overlay"><span class="pf-visit">Ver sitio ↗</span></div>
+        <div class="pf-bar"></div>
+        <div class="pf-info">
+          <div class="pf-tags"><span class="pf-tag">E-commerce</span><span class="pf-tag">Smoke Shop</span><span class="pf-tag">Retail</span></div>
+          <h3>Groove Street</h3>
+          <p>Smoke shop online con catálogo de productos, sistema de filtros, carrito de compras y experiencia de marca urbana auténtica.</p>
+          <div class="pf-features">
+            <span class="pf-feat">Tienda online</span><span class="pf-feat">Filtros</span><span class="pf-feat">Carrito</span><span class="pf-feat">Branding</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Davana Group -->
+      <a href="https://davana-group.odoo.com/" target="_blank" class="pf-card reveal" data-cat="plataforma">
+        <div class="pf-thumb">
+          <div class="pf-thumb-fallback">🏢</div>
+        </div>
+        <div class="pf-overlay"><span class="pf-visit">Ver sitio ↗</span></div>
+        <div class="pf-bar"></div>
+        <div class="pf-info">
+          <div class="pf-tags"><span class="pf-tag">ERP</span><span class="pf-tag">CRM</span><span class="pf-tag">Puerto Rico</span></div>
+          <h3>Davana Group</h3>
+          <p>Implementación ERP/CRM en Odoo para aseguradora en Puerto Rico. Automatización de procesos operativos, integración de servicios y soporte técnico.</p>
+          <div class="pf-features">
+            <span class="pf-feat">Odoo ERP</span><span class="pf-feat">Automatización</span><span class="pf-feat">Integración</span><span class="pf-feat">Soporte</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- La Zona In -->
+      <a href="https://www.lazonain.com/" target="_blank" class="pf-card reveal" data-cat="plataforma ecommerce">
+        <div class="pf-thumb">
+          <div class="pf-thumb-fallback">🏠</div>
+        </div>
+        <div class="pf-overlay"><span class="pf-visit">Ver sitio ↗</span></div>
+        <div class="pf-bar"></div>
+        <div class="pf-info">
+          <div class="pf-tags"><span class="pf-tag">Inmobiliario</span><span class="pf-tag">Web</span><span class="pf-tag">Bogotá</span></div>
+          <h3>La Zona In</h3>
+          <p>Sitio web para agencia inmobiliaria en Bogotá con estrategia de contenido en redes, modelos de inversión en finca raíz y transformación digital.</p>
+          <div class="pf-features">
+            <span class="pf-feat">Sitio web</span><span class="pf-feat">Contenido</span><span class="pf-feat">Modelos</span><span class="pf-feat">Social</span>
+          </div>
+        </div>
+      </a>
+
     </div>
   </div>
 </section>
@@ -471,7 +621,7 @@
       <p>Diagnóstico gratuito o propuesta personalizada. Respondemos en menos de 24 horas.</p>
       <div class="cta-btns">
         <a href="https://wa.me/573507894900?text=Hola,%20quiero%20más%20información%20sobre%20PyTekAI" target="_blank" class="bp">💬 WhatsApp directo</a>
-        <a href="mailto:pytekia@gmail.com" class="bg">📧 pytekia@gmail.com</a>
+        <a href="/cdn-cgi/l/email-protection#acdcd5d8c9c7c5cdeccbc1cdc5c082cfc3c1" class="bg">📧 <span class="__cf_email__" data-cfemail="4b3b323f2e20222a0b2c262a222765282426">[email&#160;protected]</span></a>
         <a href="https://forms.gle/xp8f22nAn4nGUdKF6" target="_blank" class="bg">🚀 Formulario de demo</a>
       </div>
     </div>
@@ -484,7 +634,7 @@
     <div class="fi">
       <div class="fb">Py<span>Tek</span>AI</div>
       <p>© 2025 PyTekAI · Bogotá &amp; Fort Lauderdale · Todos los derechos reservados</p>
-      <div class="fl"><a href="mailto:pytekia@gmail.com">Contacto</a><a href="https://wa.me/573507894900">WhatsApp</a></div>
+      <div class="fl"><a href="/cdn-cgi/l/email-protection#50202924353b393110373d31393c7e333f3d">Contacto</a><a href="https://wa.me/573507894900">WhatsApp</a></div>
     </div>
   </div>
 </footer>
@@ -493,7 +643,7 @@
 <a href="https://wa.me/573507894900" class="wf" target="_blank" title="WhatsApp">💬</a>
 
 <!-- ✅ CHATBASE ORIGINAL - script exacto -->
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="njKXaJ7PiewT2sh8nex5F";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
 </script>
 
@@ -540,6 +690,16 @@ function switchTab(id,btn){
   document.querySelectorAll('.tab').forEach(b=>b.classList.remove('active'));
   document.getElementById('tab-'+id).classList.add('active');
   btn.classList.add('active');
+}
+
+/* PORTFOLIO FILTER */
+function filterPF(cat,btn){
+  document.querySelectorAll('.pf-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.pf-card').forEach(card=>{
+    if(cat==='all'){card.classList.remove('hidden');return;}
+    (card.dataset.cat||'').includes(cat)?card.classList.remove('hidden'):card.classList.add('hidden');
+  });
 }
 </script>
 </body>
